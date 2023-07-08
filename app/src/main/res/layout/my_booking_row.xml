@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:id="@+id/mainlayout"
+    android:layout_height="120dp"
+    android:layout_marginTop="10dp"
+    android:background="@color/dark_gray_color"
+    android:orientation="horizontal"
+    android:weightSum="10">
+
+    <ImageView
+        android:id="@+id/iv_thumbnail"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:scaleType="fitXY"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/app_logo_splash"
+        android:text="2" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="7"
+        android:orientation="vertical"
+        android:text="7">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.example.tattomobile.utility.PoppinBoldTextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:text="title"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/dimen_18sp" />
+
+            <ImageButton
+                android:id="@+id/checkBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="2dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@color/transparent_color"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/arrow_forward" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.example.tattomobile.utility.PoppinRegularTextView
+                android:id="@+id/tv_id"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:text="ID"
+                android:textColor="@color/yellow_color"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_booking_status_done"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/green_color"
+                android:text="Done"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <com.example.tattomobile.utility.PoppinBoldTextView
+            android:id="@+id/tv_date_and_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="date and Time"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

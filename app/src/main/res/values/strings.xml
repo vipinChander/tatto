@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Sunny Tattoo</string>
+
+    <string name="title_activity_mobile_login">Sunny Tattoo</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="ok_text">OK</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="call_us_on_text">Call Us on</string>
+    <string name="save_and_next">Save &amp; Next</string>
+
+    <string name="name_text">Name</string>
+    <string name="email_text">Email</string>
+    <string name="password_text">Password</string>
+    <string name="confirm_password_text">Confirm-Password</string>
+    <string name="referral_code_text">Referral Code</string>
+    <string name="address_text">Address</string>
+    <string name="city_text">City</string>
+    <string name="skip_text">Skip</string>
+
+    <string name="internet_connection">Please check your internet connection.</string>
+    <string name="something_went_wrong">Something Went Wrong.</string>
+    <string name="feedback_message">Your Feedback is Successful sent and Your feedback is useful our organizations</string>
+    <string name="pay_text">Proceed for payment</string>
+    <string name="money_text">Rs 50/- will be minus from total amount at the store after completion of service</string>
+    <string name="empty_message">Please Filled all box</string>
+    <string name="testimonials">Testimonials</string>
+    <string name="our_works">Our Works</string>
+    <string name="payment_failed_message">Sorry ! You last payment was failed. Please try again with valid details.</string>
+    <string name="you_have_opted_to_use_your_earned_coin">You have opted to use your earned coin for this payment. You can use only 50% of amount from your earned coins.</string>
+    <string name="book_your_slot">Book your slot</string>
+    <string name="pay_full_amount">Pay Full Amount </string>
+</resources>

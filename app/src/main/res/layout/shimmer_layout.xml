@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:layout_width="match_parent"
+        app:shimmer_base_color="@color/yellow_color"
+        android:layout_height="wrap_content">
+<ImageView
+    android:layout_width="match_parent"
+android:src="@drawable/corrupted_file"
+    android:layout_height="500dp"/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</LinearLayout>

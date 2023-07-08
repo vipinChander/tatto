@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="8dp">
+
+    <RelativeLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:elevation="12dp"
+            app:cardBackgroundColor="@color/white_color"
+            app:cardCornerRadius="30dp">
+
+            <ImageView
+                android:background="@color/transparent_color"
+                android:id="@+id/iv_thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/circle_bg" />
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <com.example.tattomobile.utility.PoppinRegularTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="title"
+        android:textSize="12sp"
+        android:layout_marginStart="5sp"
+        android:textColor="@color/yellow_color" />
+
+</LinearLayout>

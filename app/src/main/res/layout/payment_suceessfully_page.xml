@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_color">
+
+        <RelativeLayout
+            android:id="@+id/mainlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_20dp"
+
+            android:layout_marginTop="@dimen/dimen_10dp">
+
+            <ImageView
+                android:id="@+id/image_suceess"
+                android:layout_width="@dimen/dimen_50dp"
+                android:layout_height="@dimen/dimen_50dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/checked" />
+
+            <com.example.tattomobile.utility.PoppinBoldTextView
+                android:id="@+id/payment_successfulltext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_15dp"
+                android:layout_toRightOf="@id/image_suceess"
+                android:text="Payment suceesfull"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <com.example.tattomobile.utility.PoppinRegularTextView
+                android:id="@+id/payment_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/payment_successfulltext"
+                android:layout_marginStart="@dimen/dimen_15dp"
+                android:layout_toRightOf="@id/image_suceess"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mainlayout"
+            android:layout_marginTop="0dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/verticalLinePopup"
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:background="#aaaaae" />
+
+            <Button
+                android:id="@+id/btnRetry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/ok_text"
+                android:textAllCaps="false"
+                android:textColor="@color/white_color"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/cancel_text"
+                android:textAllCaps="false"
+                android:textColor="@color/white_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/secondarylayout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/dimen_20dp"-->
+<!--            android:layout_below="@id/mainlayout"-->
+<!--            android:layout_marginTop="@dimen/dimen_50dp">-->
+
+<!--            <com.example.tattomobile.utility.PoppinBoldTextView-->
+<!--                android:id="@+id/tv_displaytext"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Payment Details:"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="18sp" />-->
+<!--            <com.example.tattomobile.utility.PoppinRegularTextView-->
+<!--                android:id="@+id/display_order_id"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_below="@id/tv_displaytext"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:textSize="14sp"-->
+<!--                android:text="Order Id:"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--            <com.example.tattomobile.utility.PoppinRegularTextView-->
+<!--                android:id="@+id/shown_order_id"-->
+<!--                android:textColor="@color/white"-->
+
+<!--                android:layout_below="@id/tv_displaytext"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_toRightOf="@id/display_order_id"-->
+<!--                android:textSize="14sp"-->
+<!--                android:text="1"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--            <com.example.tattomobile.utility.PoppinRegularTextView-->
+<!--                android:id="@+id/display_payment_id"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_below="@id/display_order_id"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:textSize="14sp"-->
+<!--                android:text="payment Id:"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--            <com.example.tattomobile.utility.PoppinRegularTextView-->
+<!--                android:id="@+id/shown_payment_id"-->
+<!--                android:textColor="@color/white"-->
+
+<!--                android:layout_below="@id/display_order_id"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_toRightOf="@id/display_payment_id"-->
+<!--                android:textSize="14sp"-->
+<!--                android:text="1234"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--            <com.example.tattomobile.utility.PoppinRegularTextView-->
+<!--                android:id="@+id/display_payment_Date"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_below="@id/display_payment_id"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:textSize="14sp"-->
+<!--                android:text="payment Date"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--            <com.example.tattomobile.utility.PoppinRegularTextView-->
+<!--                android:id="@+id/shown_payment_date"-->
+<!--                android:textColor="@color/white"-->
+
+<!--                android:layout_below="@id/display_payment_id"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_toRightOf="@id/display_payment_Date"-->
+<!--                android:textSize="14sp"-->
+<!--                android:text=" 24 aug 2022"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--            <com.example.tattomobile.utility.PoppinRegularTextView-->
+<!--                android:id="@+id/display_amount"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_below="@id/display_payment_Date"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:textSize="14sp"-->
+<!--                android:text="Amount :"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--            <com.example.tattomobile.utility.PoppinRegularTextView-->
+<!--                android:id="@+id/shown_amount"-->
+<!--                android:textColor="@color/white"-->
+
+<!--                android:layout_below="@id/shown_payment_date"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_toRightOf="@id/display_amount"-->
+<!--                android:textSize="14sp"-->
+<!--                android:text="1000"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--            <com.example.tattomobile.utility.PoppinRegularTextView-->
+<!--                android:id="@+id/display_mode_pay"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_below="@id/display_amount"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:textSize="14sp"-->
+<!--                android:text="payment mode"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--            <com.example.tattomobile.utility.PoppinRegularTextView-->
+<!--                android:id="@+id/shown_modepay"-->
+<!--                android:textColor="@color/white"-->
+
+<!--                android:layout_below="@id/shown_amount"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_toRightOf="@id/display_mode_pay"-->
+<!--                android:textSize="14sp"-->
+<!--                android:text="UPI"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_marginBottom="@dimen/dimen_20dp"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--        </RelativeLayout>-->
+    </RelativeLayout>
+
+
+</RelativeLayout>

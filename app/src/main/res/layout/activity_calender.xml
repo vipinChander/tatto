@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".activity.CalenderActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/transparent_color">
+
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/transparent"
+
+            android:paddingLeft="12dp"
+            android:src="@drawable/ic_back_baseline_arrow"
+            app:tint="@color/white_color" />
+
+        <com.example.tattomobile.utility.PoppinBoldTextView
+            android:id="@+id/tv_header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/ib_back"
+            android:text="Calender"
+            android:textColor="@color/white_color"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.example.tattomobile.utility.PoppinBoldTextView
+                android:id="@+id/text_Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="20dp"
+
+                android:layout_marginTop="5dp"
+
+                android:layout_marginBottom="5dp"
+                android:text="Select Location"
+                android:textAlignment="gravity"
+                android:textColor="@color/yellow_color"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/coursesspinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/text_Spinner"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:backgroundTint="@color/white"
+                android:textAlignment="center" />
+
+            <RelativeLayout
+                android:id="@+id/calender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/coursesspinner"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="1dp">
+
+                <CalendarView
+                    android:id="@+id/datepickcal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/calender_text"
+                    android:layout_marginTop="0dp"
+                    android:dateTextAppearance="@style/CalenderViewDateCustomText"
+                    android:focusedByDefault="true"
+                   android:focusable="false"
+                    android:selectedDateVerticalBar="@color/black"
+                    android:theme="@style/CalenderViewCustom"
+                    android:weekDayTextAppearance="@style/CalenderViewWeekCustomText" />
+
+                <com.example.tattomobile.utility.PoppinBoldTextView
+                    android:id="@+id/calender_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose Date and Time"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dateshow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/calender"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:padding="10dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/TimesAdapter"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/image_sel_lay"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/text_download_img"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp">
+
+                <LinearLayout
+                    android:id="@+id/selc_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/design_white_border"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <com.example.tattomobile.utility.PoppinBoldTextView
+                        android:id="@+id/image_chose"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="7"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:padding="0dp"
+                        android:text="Choose File"
+                        android:textAllCaps="false"
+                        android:textColor="#87759A"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <com.example.tattomobile.utility.PoppinRegularTextView
+                        android:id="@+id/iamge_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_pay"
+                android:layout_width="match_parent"
+
+                android:layout_height="50dp"
+                android:layout_below="@id/image_sel_lay"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/yellow_color"
+                android:text="@string/pay_text"
+                android:textColor="@color/white" />
+
+
+            <com.example.tattomobile.utility.PoppinBoldTextView
+                android:id="@+id/text_download_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dateshow"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="Upload your own design(if any)"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <com.example.tattomobile.utility.PoppinBoldTextView
+                android:id="@+id/show_payment_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_sel_lay"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:padding="1dp"
+                android:text="Payment Option"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressbarcalenderActivity"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:filterTouchesWhenObscured="false"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/progress_bg"
+        android:visibility="gone" />
+</RelativeLayout>

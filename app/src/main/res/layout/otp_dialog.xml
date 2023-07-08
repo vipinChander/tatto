@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/RelativeLayoutinterNetPopup"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="45dp"
+    android:layout_marginLeft="45dp"
+    android:layout_marginEnd="45dp"
+    android:layout_marginRight="45dp"
+    android:background="@color/yellow_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.example.tattomobile.utility.PoppinRegularTextView
+            android:id="@+id/textHeader"
+            style="?android:attr/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:text="Please Enter OTP"
+            android:textColor="@color/white_color"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <com.chaos.view.PinView
+            android:id="@+id/pinView"
+            style="@style/PinWidget.PinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:cursorVisible="true"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cursorWidth="2dp"
+            app:hideLineWhenFilled="true"
+            app:itemCount="4"
+            app:itemHeight="48dp"
+            app:itemRadius="4dp"
+            app:itemSpacing="0dp"
+            app:itemWidth="48dp"
+            app:lineWidth="2dp"
+            app:viewType="rectangle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="0dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/verticalLinePopup"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:background="#aaaaae" />
+
+        <Button
+            android:id="@+id/btnRetry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/ok_text"
+            android:textAllCaps="false"
+            android:textColor="@color/white_color"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/cancel_text"
+            android:textAllCaps="false"
+            android:textColor="@color/white_color"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/horizontalLinePopup"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/linearLayout"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:background="#aaaaae" />
+
+</RelativeLayout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black_color"
+    tools:context=".Fragment.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_color"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        tools:context=".fragment.HomeFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_header"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/transparent_color"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/ib_user_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="12dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/account_icon"
+                    app:tint="@color/white_color" />
+
+                <com.example.tattomobile.utility.PoppinBoldTextView
+                    android:id="@+id/tv_header_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/ib_user_icon"
+                    android:textColor="@color/white_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_parant_viewpage"
+                android:layout_width="match_parent"
+                android:layout_height="550dp"
+                android:visibility="gone"
+                android:focusableInTouchMode="true">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabBackground="@drawable/tab_selector"
+                app:tabGravity="center"
+                android:background="@color/transparent_color"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorHeight="0dp"
+                app:tabPaddingEnd="12dp"
+                app:tabPaddingStart="12dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_service"
+                    android:visibility="gone"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_Pagination_Video"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rv_testimonials"
+                    android:nestedScrollingEnabled="false"
+                    tools:ignore="NotSibling" />
+
+            </RelativeLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_book_with_your"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/light_orange_color"
+                android:text="Book with your own design"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rv_testimonials_View"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <com.example.tattomobile.utility.PoppinBoldTextView
+                    android:id="@+id/tv_testimonials"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/testimonials"
+                    android:textColor="@color/white_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="NotSibling" />
+
+                <com.example.tattomobile.utility.PoppinBoldTextView
+                    android:id="@+id/tv_seemore_ourWork"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="15dp"
+                    android:text="View All"
+                    android:textColor="@color/white_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_testimonials"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_testimonials"
+                    android:layout_marginTop="-2dp"
+                    android:nestedScrollingEnabled="false" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tv_gallery_view"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <com.example.tattomobile.utility.PoppinBoldTextView
+                    android:id="@+id/tv_gallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/our_works"
+                    android:textColor="@color/white_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <com.example.tattomobile.utility.PoppinBoldTextView
+                    android:id="@+id/tv_seemore_ourgall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="15dp"
+                    android:text="View All"
+                    android:textColor="@color/white_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_gallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_gallery"
+                    android:nestedScrollingEnabled="false" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <ProgressBar
+        android:id="@+id/rv_main_progress"
+        android:layout_width="@dimen/dimen_50dp"
+        android:layout_height="@dimen/dimen_50dp"
+        android:progressTint="@color/white"
+        android:progressBackgroundTintMode="add"
+        android:progressTintMode="add"
+        android:foregroundTintMode="add"
+        android:outlineProvider="background"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:indeterminateDrawable="@drawable/progress_bg"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_color">
+
+        <RelativeLayout
+            android:id="@+id/rl_header"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/transparent_color">
+
+            <ImageButton
+                android:id="@+id/ib_back"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/transparent"
+                android:paddingLeft="12dp"
+                android:src="@drawable/ic_back_baseline_arrow"
+                app:tint="@color/white_color" />
+
+            <com.example.tattomobile.utility.PoppinBoldTextView
+                android:id="@+id/tv_header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/ib_back"
+                android:text="Create Account"
+                android:textColor="@color/white_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            tools:context=".signup.RegisterActivity">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.example.tattomobile.utility.PoppinRegularTextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/name_text"
+                            android:textColor="@color/white_color"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/et_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_below="@id/tv_name"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/ractangulor_edittext"
+                            android:hint="Enter Name here..."
+                            android:imeOptions="actionNext"
+                            android:padding="10dp"
+                            android:textColor="@color/white_color"
+                            android:textColorHint="@color/light_orange_color"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <com.example.tattomobile.utility.PoppinRegularTextView
+                            android:id="@+id/tv_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/email_text"
+                            android:textColor="@color/white_color"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/et_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_below="@id/tv_email"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/ractangulor_edittext"
+                            android:hint="Enter Email here ..."
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:padding="10dp"
+                            android:textColor="@color/white_color"
+                            android:textColorHint="@color/light_orange_color"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <com.example.tattomobile.utility.PoppinRegularTextView
+                            android:id="@+id/tv_password"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/password_text"
+                            android:textColor="@color/white_color"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_editbox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_password">
+
+                            <EditText
+                                android:id="@+id/et_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:background="@drawable/ractangulor_edittext"
+                                android:hint="Enter your password..."
+                                android:imeOptions="actionDone"
+                                android:inputType="numberPassword"
+                                android:padding="10dp"
+                                android:paddingRight="50dp"
+                                android:textColor="@color/white_color"
+                                android:textColorHint="@color/light_orange_color"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:id="@+id/iv_pw_icon"
+                                android:layout_width="30dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="20dp"
+                                android:src="@drawable/password_hide_icon"
+                                app:tint="@color/white_color" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <com.example.tattomobile.utility.PoppinRegularTextView
+                            android:id="@+id/tv_confirm_password"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/confirm_password_text"
+                            android:textColor="@color/white_color"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_confirm_editbox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_confirm_password">
+
+                            <EditText
+                                android:id="@+id/et_confirm_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:background="@drawable/ractangulor_edittext"
+                                android:hint="Enter your password..."
+                                android:imeOptions="actionDone"
+                                android:inputType="numberPassword"
+                                android:padding="10dp"
+                                android:paddingRight="50dp"
+                                android:textColor="@color/white_color"
+                                android:textColorHint="@color/light_orange_color"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:id="@+id/iv_confirm_pw_icon"
+                                android:layout_width="30dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="20dp"
+                                android:src="@drawable/password_hide_icon"
+                                app:tint="@color/white_color" />
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <com.example.tattomobile.utility.PoppinRegularTextView
+                            android:id="@+id/tv_referral_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/referral_code_text"
+                            android:textColor="@color/white_color"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/et_referral_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_below="@id/tv_referral_code"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/ractangulor_edittext"
+                            android:hint="Enter Referral Code here..."
+                            android:imeOptions="actionDone"
+                            android:padding="10dp"
+                            android:textColor="@color/white_color"
+                            android:textColorHint="@color/light_orange_color"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_save_and_next"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@color/yellow_color"
+                        android:text="@string/save_and_next"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white_color"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </ScrollView>
+            <ProgressBar
+                android:id="@+id/pro_reg_page"
+                android:layout_width="@dimen/dimen_50dp"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:progressTint="@color/white"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/progress_bg"
+                android:layout_height="@dimen/dimen_50dp"/>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_home_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </RelativeLayout>
+</layout>

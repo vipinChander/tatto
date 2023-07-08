@@ -1,0 +1,124 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    compileSdk 32
+    useLibrary 'org.apache.http.legacy'
+
+    lintOptions{
+        checkReleaseBuilds false
+    }
+    defaultConfig {
+        applicationId "com.example.tattomobile"
+        minSdk 28
+        targetSdk 32
+        versionCode 2
+        versionName "1.1.0"
+        buildConfigField "String", "BASE_URL", '"https://studystadium.com/tattoo/api/v1/"'
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude("META-INF/*.kotlin_module")
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    dataBinding{
+        enabled true
+    }
+    productFlavors {
+        compileSdk 32
+        useLibrary 'org.apache.http.legacy'
+        sunnytattoo {
+            applicationId "sunnytattoo.com"
+            minSdk 28
+            targetSdk 31
+            versionCode 2
+            versionName "1.0.0"
+            buildConfigField "String", "BASE_URL", '"https://studystadium.com/tattoo/api/v1/"'
+
+        }
+
+    }
+    flavorDimensions "default"
+}
+
+dependencies {
+    implementation 'com.google.firebase:firebase-firestore:21.4.0'
+    implementation 'com.google.firebase:firebase-messaging:23.0.8'
+    def room_version = "1.1.1"
+
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    /*cardview*/
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    // RecyclerView
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation('com.squareup.retrofit2:retrofit:2.1.0') {
+        // exclude Retrofit’s OkHttp dependency module and define your own module import
+        exclude module: 'okhttp'
+    }
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.1'
+
+    implementation "io.github.rupinderjeet:kprogresshud:1.0.0"
+
+    /*volley*/
+    implementation 'com.android.volley:volley:1.2.0'
+
+    /*Picasso*/
+    implementation 'com.squareup.picasso:picasso:2.71828'
+   implementation 'com.paytm.appinvokesdk:appinvokesdk:1.6.11'
+
+//    //room
+//    implementation "android.arch.persistence.room:runtime:$room_version"
+//    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
+//    testImplementation "android.arch.persistence.room:testing:$room_version"
+
+    implementation 'org.apache.httpcomponents:httpcore:4.4.1'
+    implementation 'org.apache.httpcomponents:httpclient:4.5'
+    implementation 'io.github.chaosleung:pinview:1.4.4'
+    implementation 'com.razorpay:checkout:1.6.25'
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:30.4.1')
+
+
+    // TODO: Add the dependencies for Firebase products you want to use
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-messaging-directboot:20.2.0'
+    implementation 'com.cloudinary:cloudinary-android:2.2.0'
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+}

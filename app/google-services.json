@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "893476680749",
+    "project_id": "tattoapp-4ce9a",
+    "storage_bucket": "tattoapp-4ce9a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893476680749:android:39e11d37e6b138569234a4",
+        "android_client_info": {
+          "package_name": "com.example.tattomobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893476680749-9bet3ouc9c1eht3pte2qngjfr4vnddie.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc0RiEvm1Bd9gByeFHTIT62aQYRK6ufB0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "893476680749-9bet3ouc9c1eht3pte2qngjfr4vnddie.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893476680749:android:cb1bcd3ec2af06689234a4",
+        "android_client_info": {
+          "package_name": "sunnytattoo.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893476680749-9bet3ouc9c1eht3pte2qngjfr4vnddie.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc0RiEvm1Bd9gByeFHTIT62aQYRK6ufB0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "893476680749-9bet3ouc9c1eht3pte2qngjfr4vnddie.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

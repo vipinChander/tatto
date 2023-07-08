@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".activity.ProfileActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/transparent_color"
+        android:visibility="visible">
+
+        <com.example.tattomobile.utility.PoppinBoldTextView
+            android:id="@+id/tv_header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/ib_back"
+            android:text="Profile"
+            android:textColor="@color/white_color"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ib_back"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/transparent"
+            android:paddingLeft="12dp"
+            android:src="@drawable/ic_back_baseline_arrow"
+            app:tint="@color/white_color" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_lytlk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_header"
+        android:layout_marginTop="19dp">
+
+        <RelativeLayout
+            android:id="@+id/profile_lyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.example.tattomobile.utility.PoppinBoldTextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profileimge"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:padding="1dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.example.tattomobile.utility.PoppinBoldTextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_user_name"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="10dp"
+                android:padding="1dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <com.example.tattomobile.utility.PoppinBoldTextView
+                android:id="@+id/reward_earn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_email"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="10dp"
+                android:padding="1dp"
+                android:text=""
+                android:textColor="@color/yellow_color"
+                android:textSize="16sp" />
+
+            <com.example.tattomobile.utility.PoppinBoldTextView
+                android:id="@+id/reffer_earn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/reward_earn"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="10dp"
+
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="5dp"
+                android:padding="1dp"
+                android:text=""
+                android:textColor="@color/yellow_color"
+                android:textSize="@dimen/dimen_20dp" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/copyimge"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/reward_earn"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@id/reffer_earn"
+                android:padding="4dp"
+                android:src="@drawable/ic_baseline_filter_none_24" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profileimge"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:padding="4dp"
+                android:src="@drawable/man" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mainlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_lyt"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/shareEarn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/share" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/youtubeic"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+
+                android:layout_below="@id/shareEarn"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/youtubeicon" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/join_teligram"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/youtubeic"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/telegram"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/follow_insta"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/join_teligram"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/instagram" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/contact_us"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/follow_insta"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/call" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/our_office"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/contact_us"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/placeholder" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/private_Policytext"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/our_office"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/sharereffer"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sharereffertext"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toRightOf="@id/shareEarn"
+                android:gravity="center"
+                android:text="Refer and earn"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/youtubetext"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@+id/sharereffertext"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toRightOf="@id/youtubeic"
+                android:gravity="center"
+                android:text="Subscribe us on Youtube"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/jointeltext"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@+id/youtubetext"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toRightOf="@id/join_teligram"
+                android:gravity="center"
+                android:text="Join our telegram"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/folowinsttext"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@+id/join_teligram"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toRightOf="@id/follow_insta"
+                android:gravity="center"
+                android:text="Follow us on insta"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/contactustext"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@+id/follow_insta"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toRightOf="@id/contact_us"
+                android:gravity="center"
+                android:text="Contact us"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/ourofficestext"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@+id/contactustext"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toRightOf="@id/our_office"
+                android:gravity="center"
+                android:text="Location"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/private_Policy"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@+id/ourofficestext"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toRightOf="@id/our_office"
+                android:gravity="center"
+                android:text="Privacy Policy"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_logout"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="30dp"
+            android:text="Logout"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>

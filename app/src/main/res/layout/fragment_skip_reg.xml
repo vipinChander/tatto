@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_color"
+    tools:context=".signup.SkipRegFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.example.tattomobile.utility.PoppinRegularTextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/address_text"
+                android:textColor="@color/white_color"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/tv_address"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ractangulor_edittext"
+                android:hint="Enter Address here..."
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="@color/white_color"
+                android:textColorHint="@color/light_orange_color" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <com.example.tattomobile.utility.PoppinRegularTextView
+                android:id="@+id/tv_pin_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/city_text"
+                android:textColor="@color/white_color"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_pin_code"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/tv_pin_code"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ractangulor_edittext"
+                android:hint="Enter City here ..."
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="@color/white_color"
+                android:textColorHint="@color/light_orange_color" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <com.example.tattomobile.utility.PoppinRegularTextView
+                android:id="@+id/tv_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="State"
+                android:textColor="@color/white_color"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_state"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/tv_state"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/ractangulor_edittext"
+                android:hint="Enter State here ..."
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="@color/white_color"
+                android:textColorHint="@color/light_orange_color" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_skip"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/yellow_color"
+            android:text="@string/skip_text"
+            android:textAllCaps="false"
+            android:textColor="@color/white_color"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

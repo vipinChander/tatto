@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_color">
+
+        <RelativeLayout
+            android:id="@+id/layoutfirt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+         android:layout_marginTop="100dp"
+            tools:context=".login.MobileLoginActivity">
+
+
+            <com.example.tattomobile.utility.PoppinRegularTextView
+                android:id="@+id/tv_welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Welcome to"
+                android:textColor="@color/white_color"
+                android:textSize="18sp" />
+
+            <com.example.tattomobile.utility.PoppinBoldTextView
+                android:id="@+id/tv_sunny_tattoo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_welcome"
+                android:layout_centerHorizontal="true"
+                android:lineSpacingExtra="-10dp"
+                android:text="Sunny Tattoo\n Studio World"
+                android:textColor="@color/white_color"
+                android:textSize="28sp" />
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/tv_sunny_tattoo"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/app_logo_splash" />
+
+            <com.example.tattomobile.utility.PoppinRegularTextView
+                android:id="@+id/textmobileNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_logo"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="5dp"
+                android:text="Mobile Number"
+
+                android:textColor="@color/white_color"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/mobilenumber"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/textmobileNumber"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ractangulor_edittext"
+                android:hint="Enter your Mobile Number"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:padding="10dp"
+                android:textColor="@color/white_color"
+                android:textColorHint="@color/light_orange_color"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/mobilenumber"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/yellow_color"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="#ffff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/forgetbutton"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/button"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center_vertical"
+                android:text="Forgot Password"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#ffff"
+                android:textSize="18sp"
+                tools:ignore="RtlCompat" />
+
+
+            <RelativeLayout
+                android:id="@+id/soicalmed_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/button"
+                android:layout_marginStart="10dp"
+                android:visibility="gone"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center_horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/youtube"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="5dp"
+                    android:src="@drawable/youtube_icon" />
+
+                <ImageView
+                    android:id="@+id/facebook"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toRightOf="@id/youtube"
+                    android:padding="5dp"
+                    android:src="@drawable/facebook_icon" />
+
+                <ImageView
+                    android:id="@+id/instgram"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toRightOf="@id/facebook"
+                    android:padding="5dp"
+                    android:src="@drawable/chrome_icon" />
+            </RelativeLayout>
+
+            <com.example.tattomobile.utility.PoppinRegularTextView
+                android:id="@+id/calltext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentBottom="true"
+                android:padding="10dp"
+                android:layout_marginBottom="40dp"
+                android:text="@string/call_us_on_text"
+                android:textColor="@color/white_color"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.example.tattomobile.utility.PoppinRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="40dp"
+                android:layout_toRightOf="@id/calltext"
+                android:padding="10dp"
+                android:text="8318115565"
+                android:textColor="@color/yellow_color"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+        <ProgressBar
+            android:id="@+id/pro_Mobile_Login"
+            android:layout_width="@dimen/dimen_50dp"
+       android:visibility="gone"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/progress_bg"
+            android:layout_centerInParent="true"
+            android:layout_height="@dimen/dimen_50dp"/>
+    </RelativeLayout>
+
+    <data></data>
+</layout>
